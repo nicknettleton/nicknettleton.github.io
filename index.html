@@ -249,15 +249,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:me@nicknettleton.com">
+                        <a id="ea">
                             <svg class="icon"><use href="#email-icon"/></svg>
-                            <span class="text">me@nicknettleton.com</span>
+                            <span class="text" id="et"></span>
                         </a>
                     </li>
                 </ul>
                 <p>
                     <small>Please, no unsolicited sales, recruitment or spam.</small>
                 </p>
+                <script>
+                    var e = 'bWVAbmlja25ldHRsZXRvbi5jb20=';
+                    e = atob(e);
+                    document.getElementById('ea').setAttribute('href', 'mailto:'+e);
+                    document.getElementById('et').innerText = e;
+                </script>
             </div>
 
         </div>
@@ -271,5 +277,6 @@
         </footer>
 
     </div>
+
 </body>
 </html>
