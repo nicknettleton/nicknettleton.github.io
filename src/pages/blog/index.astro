@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import MasterLayout from "../../layouts/MasterLayout.astro";
+import Hero from "../../components/Hero.astro";
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<MasterLayout title="Recent Writing" description={SITE_DESCRIPTION}>
+
+	<Hero title="Recent Writing">
+	</Hero>
+
+	<section class="py-6 md:py-8 lg:py-12 mb-4">
+        <div class="standard-container">
+			<div class="standard-prose">
+			{
+				posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="no-underline group">
+							{/* {post.data.heroImage && (
+								<Image width={720} height={360} src={post.data.heroImage} alt="" />
+							)} */}
+							<h2 class="no-underline mt-0 mb-2 group-hover:text-link">
+								{post.data.title}
+							</h2>
+							<p class="no-underline italic text-sm text-slate-500">
+								<FormattedDate date={post.data.pubDate} />
+								{
+								post.rendered.metadata.frontmatter.minutesRead && 
+										<span>&middot; {post.rendered.metadata.frontmatter.minutesRead}</span>
+								}
+							</p>
+						</a>
+						<hr class="last-of-type:hidden mt-4 mb-8">
+				))
+			}
+			</div>
+		</div>
+	</section>
+
+</MasterLayout>

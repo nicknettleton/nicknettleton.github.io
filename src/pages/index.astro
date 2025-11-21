@@ -1,0 +1,75 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { getCollection } from 'astro:content';
+// import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).slice(0, 5);
+---
+
+<MasterLayout title="Nick Nettleton: Technology, AI & Design Leadership" description={SITE_DESCRIPTION}>
+
+    <header class="bg-indigo-900 text-white pt-12 md:pt-18 lg:pt-24 pb-4 md:pb-8 lg:pb-12">
+        <div class="standard-container standard-grid-12">
+            <div class="col-span-8 col-start-1">
+                <h1 class="text-pretty text-6xl font-bold">
+                    Strategic technology leadership
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-4 md:py-8 lg:py-12 mb-4">
+        <div class="standard-container standard-grid-12">
+            <div class="standard-prose col-span-12 md:col-span-8">
+                <p>
+                    <strong>I'm an ex-agency founder and award-winning AI Specialist, with over two
+                    decades&apos; experience creating major national and international
+                    platforms.</strong>
+                </p>
+                <p>
+                    I specialise in making complex things simple to understand; connecting
+                    diverse needs into elegant solutions; optimising things to perform at
+                    their very best.
+                </p>
+                <p>
+                    Think of me as your <em>puzzle-solver-in-chief</em> with a gift for
+                    communication.
+                </p>
+
+                <h2>Recent Writing</h2>
+
+                <ul>
+                    {
+                        posts.map((post) => (
+                                <li><a href={`/blog/${post.id}/`}>
+                                    {post.data.title}
+                                    {post.rendered.metadata.frontmatter.minutesRead && 
+                                            <span>({post.rendered.metadata.frontmatter.minutesRead})</span>
+                                    }
+                                </a></li>
+                        ))
+                    }
+                </ul>
+
+                <h2>Connect with me</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicknettleton/" target="_blank">
+                            Linkedin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicknettleton/" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-4 items-center pt-5">
+            </div>
+        </div>
+    </section>
+</MasterLayout>

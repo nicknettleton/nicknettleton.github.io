@@ -1,0 +1,67 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import Hero from "../components/Hero.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import TableOfContents from '../components/TableOfContents.astro';
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage, headings, minutesRead } = Astro.props;
+
+---
+
+<MasterLayout title={title} description={description}>
+
+    <article>
+
+        <Hero title={title}>
+            <div class="date text-base italic text-white mb-0 font-serif">
+                <FormattedDate date={pubDate} />
+                {
+                updatedDate && (
+                    <div class="last-updated-on">
+                    Last updated on <FormattedDate date={updatedDate} />
+                    </div>
+                )
+                }
+                {
+                minutesRead && 
+                    <span>&middot; {minutesRead}</span>
+                }
+            </div>
+        </Hero>
+
+        <section class="py-4 my-4 lg:my-8">
+            <div class="standard-container standard-grid-12">
+                <div class="col-span-12 md:col-span-4 md:order-2"><!-- needed for sticky to work -->
+                    <aside class="sticky top-28">
+                        <TableOfContents headings={headings} />
+                    </aside>
+                </div>
+                <article class="col-span-12 md:col-span-8">
+                    {
+                    heroImage && (
+                        <div class="hero-image mb-8">
+                            <Image width={1020} height={510} src={heroImage} alt="" />
+                        </div>
+                    )
+                    }
+                    <div class="standard-prose">
+                        <slot />
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </article>
+
+    <script>
+        // ensure toc anchor links below sticky header
+        document.querySelectorAll('article h1, article, h2, article h3, article h4, article h5').forEach(el => {
+            el.style.scrollMarginTop = '110px';
+        })
+    </script>
+
+</MasterLayout>

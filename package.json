@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.10",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/rss": "^4.0.13",
+    "@astrojs/sitemap": "^3.6.0",
+    "@observablehq/plot": "^0.6.17",
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.15.8",
+    "astro-icon": "^1.1.5",
+    "d3": "^7.9.0",
+    "katex": "^0.16.25",
+    "mdast-util-to-string": "^4.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "reading-time": "^1.5.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19"
+  }
+}

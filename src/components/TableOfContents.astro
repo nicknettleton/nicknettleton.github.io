@@ -1,0 +1,24 @@
+---
+const { headings } = Astro.props;
+// Filter to only include H2 and H3 headings for a clean TOC
+const filteredHeadings = headings.filter(h => h.depth > 1 && h.depth < 4);
+---
+
+{!!filteredHeadings.length &&
+    <nav class="border-slate-200 md:border-l-1 md:pl-4">
+        <h2 class="text-base font-bold mb-3">Contents</h2>
+        <ol class="text-base space-y-2">
+            {filteredHeadings.map((heading) => (
+                <li class="leading-snug transition-colors">
+                    <a 
+                        href={`#${heading.slug}`} 
+                        class={`${heading.depth === 3 ? 'pl-4 text-sm' : 'pl-0 font-medium'}`}
+                    >
+                        {heading.text}
+                    </a>
+                </li>
+            ))}
+        </ol>
+        <hr class="border-slate-300 mt-8 mb-4 md:hidden">
+    </nav>
+}

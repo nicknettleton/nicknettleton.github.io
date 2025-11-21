@@ -1,0 +1,226 @@
+---
+
+import '../styles/global.css';
+
+import HeaderLink from "../components/HeaderLink.astro";
+import type { ImageMetadata } from 'astro';
+import FallbackImage from '../assets/nicknettleton.png';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+interface Props {
+	title: string;
+	description: string;
+	image?: ImageMetadata;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description, image = FallbackImage } = Astro.props;
+const today = new Date();
+
+const docTitle = (title.indexOf(SITE_TITLE)) ? `${title} | ${SITE_TITLE}` : title;
+
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title={SITE_TITLE}
+            href={new URL('rss.xml', Astro.site)}
+        />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- Font preloads -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Primary Meta Tags -->
+        <title>{docTitle}</title>
+        <meta name="title" content={docTitle} />
+        <meta name="description" content={description} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:site_name" content="Nick Nettleton">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image.src, Astro.url)} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+        <!-- katex -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+
+    </head>
+    <body class="bg-indigo-900">
+        <div class="site-wrapper relative flex flex-col min-h-screen">
+
+            <!-- header -->
+            <header id="site-header" class="bg-indigo-900 text-white sticky top-0 left-0 right-0 font-sans z-50">
+
+                <!-- main bar -->
+                <div class="standard-container">
+                    <nav class="flex items-center justify-between gap-8">
+
+                        <!-- logo -->
+                        <a href="/" class="text-lg text-white font-extrabold leading-5 block py-4 flex items-center gap-2 no-underline">
+
+                            <div class="w-12 h-12 rounded-full border-1 border-white overflow-clip">
+                                <img src="/assets/nick-nettleton.webp" alt="Photo of Nick Nettleton" class="w-12 h-12">
+                            </div>
+                            <div>
+                                <div>Nick</div>
+                                <div>Nettleton</div>
+                            </div>
+                        </a>
+
+                        <!-- nav -->
+                        <div class="hidden sm:flex items-center gap-6 md:gap-10 text-sm md:text-base font-light">
+                            <HeaderLink href="/" class="text-white opacity-75 hover:opacity-100 py-2 border-b-1 border-white/0 transition-all no-underline">Home</HeaderLink>
+                            <HeaderLink href="/blog" class="text-white opacity-75 hover:opacity-100 py-2 border-b-1 border-white/0 transition-all no-underline">Recent Writing</HeaderLink>
+                            <HeaderLink href="/bio" class="text-white opacity-75 hover:opacity-100 py-2 border-b-1 border-white/0 transition-all no-underline">Bio</HeaderLink>
+                            <HeaderLink href="/contact" class="text-white opacity-75 hover:opacity-100 py-2 border-b-1 border-white/0 transition-all no-underline">Contact</HeaderLink>
+                        </div>
+
+                        <!-- social links -->
+                        <div class="hidden sm:flex items-center gap-3 text-base">
+
+                            <!-- ln -->
+                            <a href="https://www.linkedin.com/in/nicknettleton/" target="_blank" class="text-white opacity-75 hover:opacity-100 transition-all">
+                                <span class="sr-only">Find me on LinkedIn</span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 0C24.8365 4.99941e-05 32 7.16353 32 16C32 24.8364 24.8364 32 16 32C7.16353 32 4.99973e-05 24.8365 0 16C0 7.1635 7.1635 0 16 0ZM7.9668 24.3809H11.585V12.6982H7.9668V24.3809ZM20.8906 12.3408C18.4212 12.3409 17.3762 14.2567 17.3682 14.2715V12.6982H13.8984V24.3809H17.3682V18.248C17.3682 16.605 18.1247 15.6271 19.5723 15.627C20.9031 15.627 21.542 16.5667 21.542 18.248V24.3809H25.1426V16.9844C25.1426 13.8548 23.3686 12.3408 20.8906 12.3408ZM9.75879 6.85645C8.57687 6.85647 7.61914 7.82223 7.61914 9.0127C7.61918 10.2031 8.5769 11.1679 9.75879 11.168C10.9407 11.168 11.8984 10.2031 11.8984 9.0127C11.8984 7.82221 10.9407 6.85645 9.75879 6.85645Z" fill="white" />
+                                </svg>
+                            </a>
+
+                            <!-- gh -->
+                            <a href="https://github.com/nicknettleton" target="_blank" class="text-white opacity-75 hover:opacity-100 transition-all">
+                                <span class="sr-only">Find me on GitHub</span>
+                                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2846 0C7.27964 0 0 7.3333 0 16.4056C0 23.6576 4.66431 29.7962 11.135 31.9689C11.944 32.1322 12.2403 31.6159 12.2403 31.1815C12.2403 30.8012 12.2136 29.4975 12.2136 28.1392C7.68364 29.1172 6.74031 26.1836 6.74031 26.1836C6.01231 24.2822 4.93365 23.7936 4.93365 23.7936C3.45099 22.7886 5.04165 22.7886 5.04165 22.7886C6.68631 22.8972 7.5493 24.4726 7.5493 24.4726C9.00497 26.9712 11.3506 26.2652 12.2943 25.8306C12.429 24.7712 12.8606 24.0379 13.3189 23.6306C9.70596 23.2502 5.90464 21.8379 5.90464 15.5363C5.90464 13.7436 6.55131 12.2769 7.57597 11.1363C7.4143 10.729 6.84797 9.04463 7.73797 6.79031C7.73797 6.79031 9.11296 6.35564 12.2133 8.4743C13.5406 8.11519 14.9095 7.9325 16.2846 7.93097C17.6596 7.93097 19.0613 8.1213 20.3556 8.4743C23.4562 6.35564 24.8312 6.79031 24.8312 6.79031C25.7212 9.04463 25.1546 10.729 24.9929 11.1363C26.0446 12.2769 26.6646 13.7436 26.6646 15.5363C26.6646 21.8379 22.8632 23.2229 19.2233 23.6306C19.8166 24.1466 20.3286 25.1242 20.3286 26.6726C20.3286 28.8725 20.3019 30.6382 20.3019 31.1812C20.3019 31.6159 20.5986 32.1322 21.4072 31.9692C27.8779 29.7959 32.5422 23.6576 32.5422 16.4056C32.5689 7.3333 25.2626 0 16.2846 0Z" fill="white"/>
+                                </svg>
+                            </a>
+
+                        </div>
+
+                        <!-- mobile menu controls -->
+                        <div class="sm:hidden flex gap-2 items-center">
+                            <button
+                                id="mobile-open"
+                                aria-label="Open Menu"
+                                type="button"
+                                class="h-10 w-10 flex items-center justify-center rounded-full cursor-pointer"
+                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg>
+                            </button>
+                            <button
+                                id="mobile-close"
+                                aria-label="Close Menu"
+                                type="button"
+                                class="hidden h-10 w-10 flex items-center justify-center rounded-full cursor-pointer"
+                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>
+                            </button>
+                        </div>
+
+                    </nav>
+                </div>
+                <!-- end main bar -->
+
+                <!-- mobile menu -->
+                <div id="mobile-menu" class="hidden py-8">
+                    <div class="text-center gap-y-4 flex flex-col text-2xl">
+                        <HeaderLink href="/" class="text-white opacity-75 hover:opacity-100 py-2 border-b-0 border-white/0 transition-all no-underline">Home</HeaderLink>
+                        <HeaderLink href="/blog" class="text-white opacity-75 hover:opacity-100 py-2 border-b-0 border-white/0 transition-all no-underline">Recent Writing</HeaderLink>
+                        <HeaderLink href="/bio" class="text-white opacity-75 hover:opacity-100 py-2 border-b-0 border-white/0 transition-all no-underline">Bio</HeaderLink>
+                        <HeaderLink href="/contact" class="text-white opacity-75 hover:opacity-100 py-2 border-b-0 border-white/0 transition-all no-underline">Contact</HeaderLink>
+                    </div>
+                </div>
+
+                <!-- mobile menu interactions -->
+                <script>
+
+                    const menu = document.getElementById("mobile-menu");
+                    const mOpen = document.getElementById("mobile-open");
+                    const mClose = document.getElementById("mobile-close");
+
+                    function toggleMenu(){
+                        const isOpen = !menu.classList.contains("hidden");
+
+                        menu.setAttribute('aria-expanded', !isOpen);
+                        menu.classList.toggle("hidden");
+                        if(isOpen){
+                            mOpen.classList.remove('hidden') ;
+                            mClose.classList.add('hidden') ;
+                        } else {
+                            mOpen.classList.add('hidden') ;
+                            mClose.classList.remove('hidden') ;
+                        }
+
+                        document.body.classList.toggle('h-[100vh]');
+                        document.body.classList.toggle('overflow-hidden');
+                        document.getElementById('site-main')?.classList.toggle('opacity-0');
+                        document.getElementById('site-footer')?.classList.toggle('opacity-0');
+                    }
+
+                    mOpen?.addEventListener('click', toggleMenu);
+                    mClose?.addEventListener('click', toggleMenu);
+
+                </script>
+
+            </header>
+            <!-- end header -->
+
+            <!-- main content -->
+            <main id="site-main" class="bg-white flex-grow pb-4">
+                <slot />
+            </main>
+
+            <!-- footer -->
+            <footer id="site-footer" class="bg-white p-4 text-sm border-t-1 border-slate-200 text-slate-500 py-4 font-sans">
+                <div class="standard-container">
+                    &copy; {today.getFullYear()} Nick Nettleton. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script>
+
+        // open external links in new window (e.g. for content coming from markdown)
+        const qs = `
+            a[href]:not(:where(
+                [href^="#"],
+                [href^="javascript:" i],
+                [href^="/"]:not([href^="//"]),
+                [href*="//www.nicknettleton.com"],
+                [href*="//nicknettleton.com"],
+                [href*="//localhost"],
+            ))
+            `;
+        document.querySelectorAll(qs).forEach(el => {
+            if(!el.getAttribute('target')) el.setAttribute('target', '_blank');
+        })
+
+    </script>
+</html>

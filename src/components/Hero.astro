@@ -1,0 +1,17 @@
+---
+// pass title as a property, and/or pass hero raw HTML content as slot
+const { title } = Astro.props;
+---
+
+        <header class="bg-indigo-900 text-white pt-6 pb-2 md:pt-12 md:pb-6 lg:pt-24 lg:pb-12">
+            <div class="standard-container standard-grid-12">
+                <div class="col-span-12 sm:col-span-10 md:col-span-8">
+                    {title &&
+                        <h1 class="text-pretty text-4xl md:text-6xl font-bold mb-4">
+                            {title}
+                        </h1>
+                    }
+                    <slot />
+                </div>
+            </div>
+        </header>

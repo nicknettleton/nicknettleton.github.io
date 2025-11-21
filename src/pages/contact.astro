@@ -1,0 +1,34 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import Hero from "../components/Hero.astro";
+
+---
+
+<MasterLayout title="Contact" description="">
+
+    <Hero title="Contact" />
+
+    <section class="py-4 md:py-8 lg:py-12 mb-4">
+        <div class="standard-container standard-grid-12">
+            <div class="standard-prose col-span-12 md:col-span-8">
+
+                <p>
+                    Please use the following channels to get in touch based on the nature of your inquiry:
+                </p>
+                <ul>
+                    <li>LinkedIn - <a href="https://www.linkedin.com/in/nicknettleton/" target="_blank">www.linkedin.com/in/nicknettleton/</a></li>
+                    <li>Urgent/Sensitive Matters - +44 7811 279 399</li>
+                    <li>General Enquiries - <a id="ea"></a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+    <script>
+        var e = 'bmlja25ldHRsZXRvbkBnbWFpbC5jb20=';
+        e = atob(e);
+        document.getElementById('ea').setAttribute('href', 'mailto:' + e);
+        document.getElementById('ea').innerText = e;
+    </script>
+
+</MasterLayout>

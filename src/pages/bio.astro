@@ -1,0 +1,30 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import Hero from "../components/Hero.astro";
+import * as PageContent from '../content/bio.md';
+
+console.log(PageContent.frontmatter);
+
+const { title } = PageContent.frontmatter;
+const Content = PageContent.Content;
+
+---
+
+<MasterLayout title={title} description="">
+
+    <Hero title={title} />
+
+    <section class="py-4 md:py-8 lg:py-12 mb-4">
+        <div class="standard-container standard-grid-12">
+            <div class="col-span-12 md:col-span-8">
+                <img src="/assets/nick-nettleton.webp" alt="Nick Nettleton" class="w-32 sm:w-48 md:hidden float-right ml-4 rounded-full">
+                <div class="standard-prose">
+                    <Content />
+                </div>
+            </div>
+            <div class="hidden md:block md:col-span-4">
+                <img src="/assets/nick-nettleton.webp" alt="Nick Nettleton" class="mt-4 rounded-full">
+            </div>
+        </div>
+    </section>
+</MasterLayout>

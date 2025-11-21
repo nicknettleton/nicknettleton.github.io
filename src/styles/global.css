@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+
+    --font-sans-fallback: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
+    --font-sans: 'Inter', var(--font-sans-fallback);
+    --font-serif: 'Lora', serif;
+    --font-display: var(--font-sans);
+
+    /* 
+    tw default for mono:
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+
+    /* base palette */
+    /* --color-gray: #C2CBD3; */
+    /* --color-red: #EA2D43;
+    --color-blue: oklch(0.669 0.155 245.16);
+    --color-cyan: #1ABECE;
+    --color-teal: #05AF9F;
+    --color-lime: #B9DB1E;
+    --color-yellow: #F2CA1C; */
+
+    /* tints */
+    /* --color-gray-50: oklch(0.957 0.003 247.8);
+    --color-gray-100: oklch(0.923 0.007 247.87);
+    --color-gray-200: oklch(0.838 0.015 244.73);
+    --color-gray-300: oklch(0.75 0.022 241.44);
+    --color-gray-400: oklch(0.663 0.02 243.1);
+    --color-gray-500: oklch(0.577 0.017 241.94);
+    --color-gray-600: oklch(0.492 0.015 244.45);
+    --color-gray-700: oklch(0.395 0.013 248.14);
+    --color-gray-800: oklch(0.31 0.01 241.98);
+    --color-gray-900: oklch(0.224 0.006 236.8);
+    --color-gray-950: oklch(0.176 0.005 248.11); */
+    /* --color-red-50: oklch(0.959 0.017 13.2);
+    --color-red-100: oklch(0.918 0.036 15.72);
+    --color-red-200: oklch(0.844 0.073 15.58);
+    --color-red-300: oklch(0.764 0.122 16.55);
+    --color-red-400: oklch(0.686 0.178 19.02);
+    --color-red-500: oklch(0.61 0.221 21.55);
+    --color-red-600: oklch(0.514 0.186 21.73);
+    --color-red-700: oklch(0.423 0.153 21.6);
+    --color-red-800: oklch(0.335 0.121 21.72);
+    --color-red-900: oklch(0.235 0.085 21.11);
+    --color-red-950: oklch(0.185 0.068 21.36);
+    --color-blue-50: oklch(0.956 0.019 260.18);
+    --color-blue-100: oklch(0.923 0.036 257.39);
+    --color-blue-200: oklch(0.835 0.079 254.49);
+    --color-blue-300: oklch(0.758 0.123 249.09);
+    --color-blue-400: oklch(0.669 0.155 245.16);
+    --color-blue-500: oklch(0.592 0.137 244.91);
+    --color-blue-600: oklch(0.499 0.114 244.54);
+    --color-blue-700: oklch(0.413 0.095 244.88);
+    --color-blue-800: oklch(0.318 0.074 245.06);
+    --color-blue-900: oklch(0.232 0.054 245.88);
+    --color-blue-950: oklch(0.176 0.041 244.23);
+    --color-cyan-50: oklch(0.962 0.032 211.02);
+    --color-cyan-100: oklch(0.934 0.06 209.22);
+    --color-cyan-200: oklch(0.857 0.142 205.57);
+    --color-cyan-300: oklch(0.796 0.132 205.98);
+    --color-cyan-400: oklch(0.733 0.122 205.82);
+    --color-cyan-500: oklch(0.637 0.106 205.47);
+    --color-cyan-600: oklch(0.533 0.089 206.08);
+    --color-cyan-700: oklch(0.431 0.072 206.82);
+    --color-cyan-800: oklch(0.34 0.057 205.57);
+    --color-cyan-900: oklch(0.238 0.04 205.98);
+    --color-cyan-950: oklch(0.184 0.03 206.8);
+    --color-teal-50: oklch(0.958 0.06 183.28);
+    --color-teal-100: oklch(0.904 0.149 183.23);
+    --color-teal-200: oklch(0.826 0.146 183.68);
+    --color-teal-300: oklch(0.751 0.133 183.54);
+    --color-teal-400: oklch(0.678 0.12 183.43);
+    --color-teal-500: oklch(0.59 0.104 183.8);
+    --color-teal-600: oklch(0.499 0.088 183.35);
+    --color-teal-700: oklch(0.404 0.071 183.92);
+    --color-teal-800: oklch(0.313 0.056 183.64);
+    --color-teal-900: oklch(0.226 0.04 183.64);
+    --color-teal-950: oklch(0.172 0.031 183.02);
+    --color-lime-50: oklch(0.957 0.135 120.68);
+    --color-lime-100: oklch(0.911 0.211 120.6);
+    --color-lime-200: oklch(0.837 0.194 120.55);
+    --color-lime-300: oklch(0.75 0.174 120.67);
+    --color-lime-400: oklch(0.663 0.153 120.4);
+    --color-lime-500: oklch(0.579 0.134 120.8);
+    --color-lime-600: oklch(0.486 0.113 120.41);
+    --color-lime-700: oklch(0.399 0.092 120.25);
+    --color-lime-800: oklch(0.316 0.073 120.45);
+    --color-lime-900: oklch(0.221 0.05 119.95);
+    --color-lime-950: oklch(0.175 0.042 120.69);
+    --color-yellow-50: oklch(0.967 0.038 86.87);
+    --color-yellow-100: oklch(0.923 0.095 89.12);
+    --color-yellow-200: oklch(0.849 0.169 93.93);
+    --color-yellow-300: oklch(0.759 0.152 94.32);
+    --color-yellow-400: oklch(0.671 0.134 93.85);
+    --color-yellow-500: oklch(0.586 0.117 94.07);
+    --color-yellow-600: oklch(0.491 0.098 94.11);
+    --color-yellow-700: oklch(0.407 0.081 93.89);
+    --color-yellow-800: oklch(0.32 0.064 95.1);
+    --color-yellow-900: oklch(0.224 0.044 94.99);
+    --color-yellow-950: oklch(0.176 0.036 93.21); */
+
+    /* colour aliases */
+    --color-fg: var(--color-slate-900);
+    --color-bg: var(--color-white);
+    --color-link: var(--color-indigo-800);
+    --color-hover: var(--color-indigo-700);
+
+}
+
+@layer base {
+
+    /* common elements & states */
+
+    html {
+        font-optical-sizing: auto; /* from https://fonts.google.com/selection/embed specs */
+    }
+	body {
+		font-family: var(--font-sans);
+        color: var(--color-fg);
+        background-color: var(--color-bg);
+	}
+	a {
+		color: var(--color-link);
+	}
+	a:hover {
+        color: var(--color-hover);
+        text-decoration: underline;
+	}
+    a:active {
+        color: var(--color-hover);
+    }
+    :focus-visible {
+        outline-color: var(--color-link);
+    }
+    h1 {
+        @apply font-sans font-bold;
+        font-weight: 900;
+    }
+    h2 {
+        @apply font-display font-bold;
+    }
+    h3 {
+        @apply font-display font-bold;
+    }
+    h4 {
+        @apply font-display font-bold;
+    }
+    h4 {
+        @apply font-display font-bold;
+    }
+    p, ul, ol, dl, blockquote {
+    }
+    hr {
+        /* border-color: var(--color-slate-200); */
+    }
+	b, strong {
+	}
+
+    /* special */
+
+    .site-wrapper {
+    }
+
+    /* standard grid - applies standard 12 col grid with gap-8 */
+    
+    .standard-container {
+        @apply max-w-6xl mx-auto px-4 sm:px-8 md:px-12;
+        /* 5xl - max-width: var(--container-5xl); /* 64rem (1024px) */
+        /* container is deprecated; it fixes the width to breakpoint from sm (640px) up */
+    }
+    .standard-grid-12 {
+        @apply grid grid-cols-12 gap-4 sm:gap-8;
+        /* below about 400px with gap-8 the gutters+gaps take up more than the screen space,
+        so we use gap-4 which is ok down to about 210px
+        most of the site should be usable even at that small size
+        */
+    }
+
+    .standard-prose {
+        @apply prose lg:prose-lg prose-slate font-serif;
+        @apply prose-a:text-link prose-a:hover:text-hover;
+
+        >:first-child {
+            margin-top: 0; /* issue in prose adds margin to top of first element messing up layouts, silly */
+        }
+
+        overflow-wrap: break-word;
+
+        /* a {
+            color: var(--color-link);
+            &:hover {
+                color: var(--color-hover);
+            }
+        } */
+
+        .katex {
+            margin-left: 2rem;
+        }
+    }
+
+    .sr-only {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+        clip: rect(1px 1px 1px 1px);
+        /* maybe deprecated but we need to support legacy browsers */
+        clip: rect(1px, 1px, 1px, 1px);
+        /* modern browsers, clip-path works inwards from each corner */
+        clip-path: inset(50%);
+        /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+        white-space: nowrap;
+    }
+
+}
