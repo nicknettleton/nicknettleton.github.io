@@ -36,7 +36,7 @@ const { title, description, pubDate, updatedDate, heroImage, headings, minutesRe
         <section class="py-4 my-4 lg:my-8">
             <div class="standard-container standard-grid-12">
                 <div class="col-span-12 md:col-span-4 md:order-2"><!-- needed for sticky to work -->
-                    <aside class="sticky top-28">
+                    <aside class="md:sticky top-28">
                         <TableOfContents headings={headings} />
                     </aside>
                 </div>
@@ -51,6 +51,11 @@ const { title, description, pubDate, updatedDate, heroImage, headings, minutesRe
                     <div class="standard-prose">
                         <slot />
                     </div>
+
+                    <div class="text-center pt-2">
+                        <a href="/blog" class="inline-block py-3 px-5 text-base rounded-sm bg-indigo-900 text-white/80 hover:bg-indigo-800 hover:text-white no-underline transition-all">More Writing</a>
+                    </div>
+                    
                 </article>
             </div>
         </section>
