@@ -2,7 +2,7 @@
 title: "Bio / Strategic Profile"
 ---
 
-I am a hands-on technology leader, ex-agency Founder/CTO, and an award-winning AI expert, specializing in bridging complex technical realities with human-centered strategies. After two decades of successfully building and scaling platforms for major international and public-facing organizations, I am now focused on technnology and design leadership roles in public services and mission-led industries.
+I am a hands-on technology leader, ex-agency Founder/CTO, and an award-winning AI expert, specializing in bridging complex technical realities with human-centered strategies. After two decades of successfully building and scaling platforms for major international and public-facing organizations, I am now focused on technology and design leadership roles in public services and mission-led industries.
 
 My career is defined by my gift for translating complexity into actionable strategy, a skill essential for solving the high-stakes problems facing government and industry today.
 
@@ -26,7 +26,7 @@ Explainability is probably the major issue in AI today, affecting business use, 
 
 ### Data Governance
 
-- I have led the architecture and risk assessment for projects such as a UKRI-funded MedTech project designed to hold special category clinical and genetic data in partnership with major NHS and academic institutions. This involved ensuring compliance, security, and establishing a trusted co-design partnerships with patients, clinicians and subject-matter specialists such as the RNIB.
+- I have led the architecture and risk assessment for projects such as a UKRI-funded MedTech project designed to hold special category clinical and genetic data in partnership with major NHS and academic institutions. This involved ensuring compliance, security, and establishing trusted co-design partnerships with patients, clinicians and subject-matter specialists such as the RNIB.
 
 ### C-Suite Influence & Programme Rescue
 

@@ -103,7 +103,7 @@ This is why, when we want to know how or why this or that model made a particula
 
 ## 5. The Consequence of Opacity
 
- Because AI is probabilistic - not deterministic - and imperfect in many ways, as well as being highly sensitive to training data, evaluation process, and human inputs... because of all of this, when we are using it, we really do need to be able to inspect what's going on. We need to be in the driving seat. Whether we are users, owners or operators, we need to be able to link inputs to outputs and actions and make sure we are happy with them.
+Since AI is probabilistic - not deterministic - and imperfect in many ways, as well as being highly sensitive to training data, evaluation process, human inputs... because of all of this, when we are using it, we really do need to be able to inspect what's going on. We need to be in the driving seat. Whether we are users, owners or operators, we need to be able to link inputs to outputs and actions and make sure we are happy with them.
 
 That's a fundamental pillar of user experience, of risk management, of so many different disciplines in technology. Everyone gets this. It's why end users want to feel in control, why legislators want to understand the detail of how things work, why businesses are concerned about implementation risks.
 
