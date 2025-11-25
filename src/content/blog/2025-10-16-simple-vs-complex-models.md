@@ -1,5 +1,5 @@
 ---
-title: "A Tale of Two Formulas: Why We Can't Read an AI's Mind"
+title: "Why We Can't Read an AI's Mind... A Tale of Two Formulae"
 description: 'In my last post, I shared why I think Explainability is the number one problem in AI right now. But why do we have this problem? Why is it a problem at all?'
 pubDate: '16 Oct 2025'
 # heroImage: '../../assets/image.jpg'
@@ -22,18 +22,6 @@ $$\text{Expected spend} = (a \times \text{salary}) + b$$
 <!-- Expected_spend_on_fancy_cake = (a * salary) + b -->
 
 We use a simple algorithm to calculate what a and b are, based on the known data, and we can then use these figures to predict spend for all sorts of new people who we meet. That's machine learning at its most basic.
-
-<!-- TODO:suggested-crop
-
-As a clever reader you will have spotted a massive flaw here: obviously the likelihood that anyone will spend exactly the predicted amount - say £50 - is very small. Maybe they spent £49.99, or £40, or £102. What I really want to know is, what's a likely range for that person?
-
-So we can make our model much more useful with a little extra maths. Let's say we want to know if someone's 90% likely to spend between this and that. We update our programme calculate two more lines, our upper and lower prediction bounds:
-
-todo: scatter chart with lr line + ub/lb lines
-
-So, say you earn £50k a year, our (totally imaginary) model predicts that you're 90% likely to spend between £25 and £70 on your fancy cake, with an average value of £50. (By average here, we mean that if an infinite number of people earning £50k just happened to turned up, this is what we would expect, from our original training data, their average spend to be.)
-
-TODO:/suggested-crop -->
 
 This model is very easy to explain and understand. It's very transparent. You can see how the model works, and you can see for your individual prediction, how it was arrived at based on the information you put in. And - crucially - it's easy to pull apart and critique. Where did the data come from? Does this formula really represent me?
 
