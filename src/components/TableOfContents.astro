@@ -4,7 +4,7 @@ const { headings } = Astro.props;
 const filteredHeadings = headings.filter(h => h.depth > 1 && h.depth < 4);
 ---
 
-{!!filteredHeadings.length &&
+{filteredHeadings.length > 1 &&
     <nav class="border-slate-200 md:border-l-1 md:pl-4">
         <h2 class="text-base font-bold mb-3">Contents</h2>
         <ol class="text-base space-y-2">

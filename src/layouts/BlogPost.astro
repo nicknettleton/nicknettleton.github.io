@@ -5,9 +5,11 @@ import type { CollectionEntry } from "astro:content";
 import Hero from "../components/Hero.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import TableOfContents from '../components/TableOfContents.astro';
+import RecentPosts from '../components/RecentPosts.astro';
 
 type Props = CollectionEntry<"blog">["data"];
 
+const { slug } = Astro.params;
 const { title, description, pubDate, updatedDate, heroImage, headings, minutesRead } = Astro.props;
 
 ---
@@ -52,7 +54,10 @@ const { title, description, pubDate, updatedDate, heroImage, headings, minutesRe
                         <slot />
                     </div>
 
-                    <div class="text-center pt-2">
+                    <hr class="border-slate-300 mb-8">
+                    <RecentPosts currentSlug={slug} />
+
+                    <div class="text-center">
                         <a href="/blog" class="inline-block py-3 px-5 text-base rounded-sm bg-indigo-900 text-white/80 hover:bg-indigo-800 hover:text-white no-underline transition-all">More Writing</a>
                     </div>
                     

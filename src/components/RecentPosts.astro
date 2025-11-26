@@ -1,0 +1,42 @@
+---
+// src/components/RecentPosts.astro
+import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+const { currentSlug } = Astro.props;
+
+// 1. Get all blog posts
+const allPosts = await getCollection('blog');
+
+// 2. Filter out the current post, sort by date, and slice the top 3
+const recentPosts = allPosts
+  .filter(post => post.id !== currentSlug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<section>
+    <h2 class="mb-4 md:mb-8">Read Next...</h2>
+    <div class="standard-prose">
+    {
+        recentPosts.map((post) => (
+                <a href={`/blog/${post.id}/`} class="no-underline group">
+                    {/* {post.data.heroImage && (
+                        <Image width={720} height={360} src={post.data.heroImage} alt="" />
+                    )} */}
+                    <h3 class="no-underline mt-0 mb-2 group-hover:text-link">
+                        {post.data.title}
+                    </h3>
+                    <p class="no-underline italic text-sm text-slate-500">
+                        <FormattedDate date={post.data.pubDate} />
+                        {
+                        post.rendered.metadata.frontmatter.minutesRead && 
+                                <span>&middot; {post.rendered.metadata.frontmatter.minutesRead}</span>
+                        }
+                    </p>
+                </a>
+                <hr class="mt-4 mb-8">
+        ))
+    }
+    </div>
+</section>
