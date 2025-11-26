@@ -5,7 +5,7 @@ pubDate: '16 Oct 2025'
 # heroImage: '../../assets/image.jpg'
 ---
 
-[In my last post](/blog/2025-11-01-explainability-challenge/), I shared why I think Explainability is the number one problem in AI right now. But why do we have this problem? Why is it a problem at all?
+[In my last post](/blog/2025-10-10-explainability-challenge/), I shared why I think Explainability is the number one problem in AI right now. But why do we have this problem? Why is it a problem at all?
 
 ## 1. A Simple, Explainable Model
 
@@ -67,7 +67,7 @@ It's because of the way AI is created. We don't design the calculations by hand,
 
 Instead, we write a software programme whose job it is to come up with that incredibly complex formula. The programme does this by repeatedly exploring and evaluating different values for its trillions of parameters until it achieves an accuracy threshold that meets what we are after. This is what we call training.
 
-To get a sense of scale here, a single training run for a model like Gemini Pro is estimated to require over 1 YottaFLOP. That's one septillion calculations: 1,000,000,000,000,000,000,000,000.
+To get a sense of scale here, a single training run for a model like Gemini Pro is estimated to require over 1 YottaFLOP.[^1] That's one septillion calculations: 1,000,000,000,000,000,000,000,000.
 
 To put that in context, the observable universe is estimated to be a mere [540 sextillion](https://www.bbc.co.uk/future/article/20210326-the-mystery-of-our-expanding-universe) - about half of the number - of miles across.
 
@@ -100,3 +100,5 @@ It's hard to see how AI can progress at pace, outside of experimental and low-ri
 This is why the 'Black Box' is not just a technical curiosity; it is a governance crisis. If we cannot explain the model, we cannot fully trust its decisions in critical infrastructure. **We cannot regulate what we cannot read**.
 
 That's the Explainability Problem. In my next post, I'm going to explore the current state of AI explainability, and why, from a user perspective, it's not doing what we need it to. Then we can start to explore solutions.
+
+[^1]: See for example Epoch AI's training compute data on notable AI models - https://epoch.ai/data/ai-models

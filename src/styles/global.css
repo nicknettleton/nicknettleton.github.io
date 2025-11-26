@@ -219,3 +219,11 @@
     }
 
 }
+
+@layer components {
+
+    article section.footnotes {
+        @apply pt-2 border-t border-slate-300 text-sm mb-8;
+    }
+    
+}

@@ -64,7 +64,7 @@ const { title, description, pubDate, updatedDate, heroImage, headings, minutesRe
 
     <script>
         // ensure toc anchor links below sticky header
-        document.querySelectorAll('article h1, article, h2, article h3, article h4, article h5').forEach(el => {
+        document.querySelectorAll('article h1, article, h2, article h3, article h4, article h5, a[data-footnote-ref]').forEach(el => {
             el.style.scrollMarginTop = '110px';
         })
     </script>
