@@ -99,6 +99,6 @@ It's hard to see how AI can progress at pace, outside of experimental and low-ri
 
 This is why the 'Black Box' is not just a technical curiosity; it is a governance crisis. If we cannot explain the model, we cannot fully trust its decisions in critical infrastructure. **We cannot regulate what we cannot read**.
 
-That's the Explainability Problem. In my next post, I'm going to explore the current state of AI explainability, and why, from a user perspective, it's not doing what we need it to. Then we can start to explore solutions.
+That's the Explainability Problem. In an upcoming post, I'll to explore the current state of AI explainability, and why, from a user perspective, it's not doing what we need it to. Then we can start to explore solutions.
 
 [^1]: See for example Epoch AI's training compute data on notable AI models - https://epoch.ai/data/ai-models

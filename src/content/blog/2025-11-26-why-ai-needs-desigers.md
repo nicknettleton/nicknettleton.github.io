@@ -6,11 +6,11 @@ pubDate: "26 Nov 2025"
 
 Most writing and thinking by designers about AI today is about how to integrate AI into the process. For example, using AI to analyse sentiment and research, to support ideation, to automate parts of the creative process, or to predict how different design solutions might perform in real-world use.[^1]
 
-This is valuable work, but it's too small. AI is not just a helpful tool for designers. We desperately need designers, and Design Thinking, to play leading role in defining and executing the vision for AI in our world.
+This is valuable work, but it's too small. AI is not just a helpful tool for designers. We desperately need designers, and Design Thinking, to play a leading role in defining and executing the vision for AI in our world.
 
 Without Design Thinking, we risk having a lot of very clever technologies that don't solve real world problems very well.
 
-That's exactly what's happening now. Gartner predicted that by the end of 2025, 30% of GenAI projects would be abandoned. Hugging Face CEO Clem Delangue speaks of an LLM bubble. Google CEO Sundar Pichai reminds us not to trust everything AI tells us.[^2]
+In fact, that's exactly what's happening now. Gartner predicted that by the end of 2025, 30% of GenAI projects would be abandoned. Hugging Face CEO Clem Delangue speaks of an LLM bubble. Google CEO Sundar Pichai reminds us not to trust everything AI tells us.[^2]
 
 These are, partly, design problems. Problems of clever technology where the use cases aren't working. Problems of too many engines and not enough steering wheels.
 

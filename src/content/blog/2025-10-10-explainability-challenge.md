@@ -78,7 +78,7 @@ Something that looks like magic, feels like magic, and we can't really explain h
 
 So, how do we solve this?
 
-I want to start by understanding the scale and reasons for the problem. In my next post, we'll dive deep into the Explainability Problem and what we really mean by Black Box. We'll compare a simple model with 2 parameters, which we can easily explain, to a modern AI with 1.5 trillion. 
+I want to start by understanding the scale and reasons for the problem. In my [next post](/blog/2025-10-16-simple-vs-complex-models/), we'll dive deep into the Explainability Problem and what we really mean by Black Box. We'll compare a simple model with 2 parameters, which we can easily explain, to a modern AI with 1.5 trillion. 
 
 This will then help us to understand where current approaches to explainability aren't working, and from this what we can do to solve them.
 
