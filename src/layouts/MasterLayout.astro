@@ -209,6 +209,14 @@ const docTitle = (title.indexOf(SITE_TITLE)) ? `${title} | ${SITE_TITLE}` : titl
     </body>
     <script>
 
+        const e = 'bmlja25ldHRsZXRvbkBnbWFpbC5jb20=';
+        const emla = document.getElementById('emla');
+        if(emla){  
+            var ed = atob(e);      
+            emla.setAttribute('href', 'mailto:' + ed);
+            emla.innerText = ed;
+        }
+        
         // open external links in new window (e.g. for content coming from markdown)
         const qs = `
             a[href]:not(:where(

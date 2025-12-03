@@ -2,11 +2,18 @@
 title: "Bio / Strategic Profile"
 ---
 
-I am a hands-on technology leader, ex-agency Founder/CTO, and an award-winning AI expert, specializing in bridging complex technical realities with human-centered strategies. After two decades of successfully building and scaling platforms for major international and public-facing organizations, I am now focused on technology and design leadership roles in public services and mission-led industries.
+I’m a strategic technology leader and award-winning AI expert. I specialise in bridging the gap between complex technology and human-centered product design.
 
-My career is defined by my gift for translating complexity into actionable strategy, a skill essential for solving the high-stakes problems facing government and industry today.
+With 18+ years experience delivering major platforms for organisations such as NHS, PwC, BCD, Blackhawk, I currently operate as an independent Principal Consultant, partnering with leadership to solve high stakes strategy, design, delivery and optimisation challenges.
 
-## Technical Credentials
+## Current focus
+
+I am a ‘player-coach’ who combines strategic direction with technical craft, across product, design, AI and engineering:
+
+- **Strategic Transformation:** Currently leading product and UX modernisation for major US public transport provider, and migration to modern JAMstack architecture.
+- **AI Trust, Safety and Usability:** Winner of the NIH (National Institutes of Health) Explainability Prize. I help organisations architect the user experiences that make AI safe, usable and effective, by connecting Design Thinking with a formal theoretical knowledge of the maths and technology. More details below.
+
+## Credentials
 
 ### AI Leadership & Explainability (XAI)
 
@@ -22,12 +29,6 @@ Explainability is probably the major issue in AI today, affecting business use, 
 
 - I have led the end-to-end modernization of numerous legacy industry technology and data platforms, successfully migrating them to modern cloud architectures with modern, agile, user-centred design and development governance processes.
 
-## Leadership, Governance & Turnaround
-
-### Data Governance
-
-- I have led the architecture and risk assessment for projects such as a UKRI-funded MedTech project designed to hold special category clinical and genetic data in partnership with major NHS and academic institutions. This involved ensuring compliance, security, and establishing trusted co-design partnerships with patients, clinicians and subject-matter specialists such as the RNIB.
-
 ### C-Suite Influence & Programme Rescue
 
 - Complex technology programmes and legacy platforms frequently get stuck. I have long experience of addressing these challenges, turning failing platforms into industry leaders through collaboration, governance and streamlining.
@@ -38,6 +39,10 @@ Explainability is probably the major issue in AI today, affecting business use, 
 
 ## Next Steps
 
-Details of my full experience is available on request. Please message me via [LinkedIn](https://www.linkedin.com/in/nicknettleton/).  
+Details of my full experience are available on request. Please message me via [LinkedIn](https://www.linkedin.com/in/nicknettleton/).  
 
-I work with organisations across the UK, US and Europe from my base in London.
+I work with organisations across the UK, US and Europe from my base in London. To discuss potential work, please reach out via:
+
+- Email: <a id="emla"></a>
+- LinkedIn: [www.linkedin.com/in/nicknettleton/](www.linkedin.com/in/nicknettleton/)
+- Urgent/Sensitive: +44 7811 279 399
