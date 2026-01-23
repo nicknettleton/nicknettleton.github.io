@@ -2,9 +2,9 @@
 title: "Bio / Strategic Profile"
 ---
 
-I’m a strategic technology leader and award-winning AI expert. I specialise in bridging the gap between complex technology and human-centered product design.
+I’m an experienced design-led technology leader, engineer and award-winning AI specialist. I focus on bridging the gap between complex technology and human-centered product design.
 
-With 18+ years experience delivering major platforms for organisations such as NHS, PwC, BCD, Blackhawk, I currently operate as an independent Principal Consultant, partnering with leadership to solve high stakes strategy, design, delivery and optimisation challenges.
+With over two deacdes’ experience delivering major platforms for organisations such as NHS, PwC, BCD, Blackhawk, I currently operate as an independent Principal Consultant, partnering with leadership to solve high stakes strategy, design, delivery and optimisation challenges.
 
 ## Current focus
 
@@ -36,6 +36,8 @@ Explainability is probably the major issue in AI today, affecting business use, 
 - I successfully navigated a critical, high-risk global platform migration for a major global travel group, securing buy-in from UK and global boards by translating technical risk into a clear, visual de-risked strategy.
 
 - My background includes 18 years of P&L responsibility and building high-performing, international, multidisciplinary teams, resulting in exceptional staff loyalty with core team retention of 5-10 years.
+
+I now apply this commercial wisdom back to hands-on architecture and design strategy.
 
 ## Next Steps
 
